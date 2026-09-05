@@ -1,0 +1,9 @@
+C:/Users/Gavin/OneDrive/Documents/cpp/Projects/Clicker/build/Desktop_x86_windows_msys_pe_64bit_Debug/CMakeFiles/Clicker.dir
+C:/Users/Gavin/OneDrive/Documents/cpp/Projects/Clicker/build/Desktop_x86_windows_msys_pe_64bit_Debug/CMakeFiles/edit_cache.dir
+C:/Users/Gavin/OneDrive/Documents/cpp/Projects/Clicker/build/Desktop_x86_windows_msys_pe_64bit_Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Gavin/OneDrive/Documents/cpp/Projects/Clicker/build/Desktop_x86_windows_msys_pe_64bit_Debug/CMakeFiles/list_install_components.dir
+C:/Users/Gavin/OneDrive/Documents/cpp/Projects/Clicker/build/Desktop_x86_windows_msys_pe_64bit_Debug/CMakeFiles/install.dir
+C:/Users/Gavin/OneDrive/Documents/cpp/Projects/Clicker/build/Desktop_x86_windows_msys_pe_64bit_Debug/CMakeFiles/install/local.dir
+C:/Users/Gavin/OneDrive/Documents/cpp/Projects/Clicker/build/Desktop_x86_windows_msys_pe_64bit_Debug/CMakeFiles/install/strip.dir
+C:/Users/Gavin/OneDrive/Documents/cpp/Projects/Clicker/build/Desktop_x86_windows_msys_pe_64bit_Debug/CMakeFiles/Clicker_autogen_timestamp_deps.dir
+C:/Users/Gavin/OneDrive/Documents/cpp/Projects/Clicker/build/Desktop_x86_windows_msys_pe_64bit_Debug/CMakeFiles/Clicker_autogen.dir

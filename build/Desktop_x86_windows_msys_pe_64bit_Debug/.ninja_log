@@ -1,0 +1,15 @@
+# ninja log v7
+41	262	8103256659545566	Clicker_autogen/timestamp	4a726face3011f38
+41	262	8103256659545566	Clicker_autogen/mocs_compilation.cpp	4a726face3011f38
+41	262	8103256659545566	C:/Users/Gavin/OneDrive/Documents/cpp/Projects/Clicker/build/Desktop_x86_windows_msys_pe_64bit_Debug/Clicker_autogen/timestamp	4a726face3011f38
+41	262	8103256659545566	C:/Users/Gavin/OneDrive/Documents/cpp/Projects/Clicker/build/Desktop_x86_windows_msys_pe_64bit_Debug/Clicker_autogen/mocs_compilation.cpp	4a726face3011f38
+2044	7490	8103255633718040	CMakeFiles/Clicker.dir/Clicker_autogen/mocs_compilation.cpp.obj	27565cd025327b18
+2050	7646	8103255633783230	CMakeFiles/Clicker.dir/main.cpp.obj	e049baebec1339a4
+264	4634	8103256661775451	CMakeFiles/Clicker.dir/mainwindow.cpp.obj	c5809a17cc97ca97
+4634	4958	8103256705481164	Clicker.exe	7782f8a5b5e30c9b
+42	304	8103257428244812	Clicker_autogen/timestamp	4a726face3011f38
+42	304	8103257428244812	Clicker_autogen/mocs_compilation.cpp	4a726face3011f38
+42	304	8103257428244812	C:/Users/Gavin/OneDrive/Documents/cpp/Projects/Clicker/build/Desktop_x86_windows_msys_pe_64bit_Debug/Clicker_autogen/timestamp	4a726face3011f38
+42	304	8103257428244812	C:/Users/Gavin/OneDrive/Documents/cpp/Projects/Clicker/build/Desktop_x86_windows_msys_pe_64bit_Debug/Clicker_autogen/mocs_compilation.cpp	4a726face3011f38
+305	4353	8103257430873851	CMakeFiles/Clicker.dir/mainwindow.cpp.obj	c5809a17cc97ca97
+4353	4635	8103257471352803	Clicker.exe	7782f8a5b5e30c9b
