@@ -3,9 +3,17 @@
 
 #include <QTimer>
 
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QFile>
+
+
 int pts;
 int pps = 0;
 int ppc = 1;
+
+void save_game();
+void load_game();
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -100,6 +108,58 @@ void MainWindow::on_actionReset_Stats_triggered()
 
 void MainWindow::on_actionSave_triggered()
 {
-
+    save_game();
 }
 
+
+void MainWindow::on_actionLoad_triggered()
+{
+    load_game();
+    ui->points->setText("Points: " + QString::number(pts));
+    ui->ppc->setText("PPC: " + QString::number(ppc));
+    ui->pps->setText("PPS: " + QString::number(pps));
+}
+
+void save_game(){
+    QJsonObject saveData;
+
+    saveData["pts"] = pts;
+    saveData["ppc"] = ppc;
+    saveData["pps"] = pps;
+
+    QJsonDocument document(saveData);
+
+    QByteArray jsonData = document.toJson();
+
+    QFile file("save.json");
+
+    if (!file.open(QIODevice::WriteOnly))
+    {
+        return;
+    }
+
+    file.write(jsonData);
+
+    file.close();
+}
+
+void load_game(){
+    QFile file("save.json");
+
+    if (!file.open(QIODevice::ReadOnly))
+    {
+        return;
+    }
+
+    QByteArray jsonData = file.readAll();
+
+    file.close();
+
+    QJsonDocument document = QJsonDocument::fromJson(jsonData);
+
+    QJsonObject saveData = document.object();
+
+    pts = saveData["pts"].toInt();
+    ppc = saveData["ppc"].toInt();
+    pps = saveData["pps"].toInt();
+}

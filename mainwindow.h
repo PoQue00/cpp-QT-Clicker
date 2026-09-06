@@ -28,6 +28,10 @@ private slots:
 
     void on_actionReset_Stats_triggered();
 
+    void on_actionSave_triggered();
+
+    void on_actionLoad_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
