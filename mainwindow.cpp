@@ -97,3 +97,9 @@ void MainWindow::on_actionReset_Stats_triggered()
     ui->pps->setText("PPS: " + QString::number(pps));
 }
 
+
+void MainWindow::on_actionSave_triggered()
+{
+
+}
+
