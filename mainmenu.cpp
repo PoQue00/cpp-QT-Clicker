@@ -40,4 +40,3 @@ void MainMenu::on_Load_Game_clicked()
     gameWindow->show();
     this->hide();
 }
-

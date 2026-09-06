@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QDockWidget>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
@@ -32,12 +33,15 @@ public:
     QWidget *centralwidget;
     QLabel *points;
     QPushButton *plus_pts;
-    QPushButton *plus_pps1;
-    QPushButton *plus_ppc1;
     QLabel *ppc;
     QLabel *pps;
+    QPushButton *Shop;
     QMenuBar *menuBar;
     QMenu *menuFile;
+    QDockWidget *dockWidget;
+    QWidget *dockWidgetContents;
+    QPushButton *plus_pps1;
+    QPushButton *plus_ppc1;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -58,22 +62,19 @@ public:
         centralwidget->setObjectName("centralwidget");
         points = new QLabel(centralwidget);
         points->setObjectName("points");
-        points->setGeometry(QRect(0, 0, 91, 21));
+        points->setGeometry(QRect(230, 20, 91, 21));
         plus_pts = new QPushButton(centralwidget);
         plus_pts->setObjectName("plus_pts");
-        plus_pts->setGeometry(QRect(0, 60, 51, 24));
-        plus_pps1 = new QPushButton(centralwidget);
-        plus_pps1->setObjectName("plus_pps1");
-        plus_pps1->setGeometry(QRect(160, 100, 161, 24));
-        plus_ppc1 = new QPushButton(centralwidget);
-        plus_ppc1->setObjectName("plus_ppc1");
-        plus_ppc1->setGeometry(QRect(160, 130, 171, 24));
+        plus_pts->setGeometry(QRect(230, 80, 51, 24));
         ppc = new QLabel(centralwidget);
         ppc->setObjectName("ppc");
-        ppc->setGeometry(QRect(0, 20, 61, 16));
+        ppc->setGeometry(QRect(230, 40, 61, 16));
         pps = new QLabel(centralwidget);
         pps->setObjectName("pps");
-        pps->setGeometry(QRect(0, 40, 71, 16));
+        pps->setGeometry(QRect(230, 60, 71, 16));
+        Shop = new QPushButton(centralwidget);
+        Shop->setObjectName("Shop");
+        Shop->setGeometry(QRect(0, 0, 41, 24));
         MainWindow->setCentralWidget(centralwidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName("menuBar");
@@ -81,6 +82,20 @@ public:
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName("menuFile");
         MainWindow->setMenuBar(menuBar);
+        dockWidget = new QDockWidget(MainWindow);
+        dockWidget->setObjectName("dockWidget");
+        dockWidget->setLayoutDirection(Qt::LayoutDirection::RightToLeft);
+        dockWidget->setDockLocation(Qt::DockWidgetArea::LeftDockWidgetArea);
+        dockWidgetContents = new QWidget();
+        dockWidgetContents->setObjectName("dockWidgetContents");
+        plus_pps1 = new QPushButton(dockWidgetContents);
+        plus_pps1->setObjectName("plus_pps1");
+        plus_pps1->setGeometry(QRect(20, 0, 111, 24));
+        plus_ppc1 = new QPushButton(dockWidgetContents);
+        plus_ppc1->setObjectName("plus_ppc1");
+        plus_ppc1->setGeometry(QRect(10, 30, 121, 24));
+        dockWidget->setWidget(dockWidgetContents);
+        MainWindow->addDockWidget(Qt::DockWidgetArea::LeftDockWidgetArea, dockWidget);
 
         menuBar->addAction(menuFile->menuAction());
         menuFile->addAction(actionSave);
@@ -108,11 +123,12 @@ public:
         actionMain_Menu->setText(QCoreApplication::translate("MainWindow", "Main Menu", nullptr));
         points->setText(QCoreApplication::translate("MainWindow", "Points: 0", nullptr));
         plus_pts->setText(QCoreApplication::translate("MainWindow", "+Points", nullptr));
-        plus_pps1->setText(QCoreApplication::translate("MainWindow", "Buy 1 PPS for 50 Pts", nullptr));
-        plus_ppc1->setText(QCoreApplication::translate("MainWindow", "Buy 1 PPC for 30 Pts", nullptr));
         ppc->setText(QCoreApplication::translate("MainWindow", "PPC: ", nullptr));
         pps->setText(QCoreApplication::translate("MainWindow", "PPS:", nullptr));
+        Shop->setText(QCoreApplication::translate("MainWindow", "Shop", nullptr));
         menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
+        plus_pps1->setText(QCoreApplication::translate("MainWindow", "Buy 1 PPS for 50 Pts", nullptr));
+        plus_ppc1->setText(QCoreApplication::translate("MainWindow", "Buy 1 PPC for 30 Pts", nullptr));
     } // retranslateUi
 
 };

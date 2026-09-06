@@ -163,3 +163,9 @@ void MainWindow::on_actionMain_Menu_triggered()
     mainMenu->show();
     this->hide();
 }
+
+void MainWindow::on_Shop_clicked()
+{
+    ui->dockWidget->show();
+}
+

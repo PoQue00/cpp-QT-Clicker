@@ -34,6 +34,8 @@ private slots:
 
     void on_actionMain_Menu_triggered();
 
+    void on_Shop_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
