@@ -86,3 +86,14 @@ void MainWindow::on_actionQuit_triggered()
     QApplication::quit();
 }
 
+
+void MainWindow::on_actionReset_Stats_triggered()
+{
+    pts = 0;
+    ppc = 1;
+    pps = 0;
+    ui->points->setText("Points: " + QString::number(pts));
+    ui->ppc->setText("PPC: " + QString::number(ppc));
+    ui->pps->setText("PPS: " + QString::number(pps));
+}
+

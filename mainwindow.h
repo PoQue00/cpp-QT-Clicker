@@ -26,6 +26,8 @@ private slots:
 
     void on_actionQuit_triggered();
 
+    void on_actionReset_Stats_triggered();
+
 private:
     Ui::MainWindow *ui;
 };
