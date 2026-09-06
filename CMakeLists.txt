@@ -11,6 +11,7 @@ qt_add_executable(Clicker
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
+    mainmenu.h mainmenu.cpp mainmenu.ui
 )
 
 target_link_libraries(Clicker

@@ -113,6 +113,8 @@
     <addaction name="actionReset_Stats"/>
     <addaction name="separator"/>
     <addaction name="actionQuit"/>
+    <addaction name="separator"/>
+    <addaction name="actionMain_Menu"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
@@ -134,6 +136,11 @@
   <action name="actionReset_Stats">
    <property name="text">
     <string>Reset Stats</string>
+   </property>
+  </action>
+  <action name="actionMain_Menu">
+   <property name="text">
+    <string>Main Menu</string>
    </property>
   </action>
  </widget>

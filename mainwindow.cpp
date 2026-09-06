@@ -30,6 +30,8 @@ MainWindow::MainWindow(QWidget *parent)
             {
             pts = pts + pps;
             ui->points->setText("Points: " + QString::number(pts));
+            ui->ppc->setText("PPC: " + QString::number(ppc));
+            ui->pps->setText("PPS: " + QString::number(pps));
             });
 
     timer->start(1000);

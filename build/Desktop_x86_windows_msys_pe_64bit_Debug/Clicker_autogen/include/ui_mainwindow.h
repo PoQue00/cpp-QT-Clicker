@@ -28,6 +28,7 @@ public:
     QAction *actionLoad;
     QAction *actionQuit;
     QAction *actionReset_Stats;
+    QAction *actionMain_Menu;
     QWidget *centralwidget;
     QLabel *points;
     QPushButton *plus_pts;
@@ -51,6 +52,8 @@ public:
         actionQuit->setObjectName("actionQuit");
         actionReset_Stats = new QAction(MainWindow);
         actionReset_Stats->setObjectName("actionReset_Stats");
+        actionMain_Menu = new QAction(MainWindow);
+        actionMain_Menu->setObjectName("actionMain_Menu");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         points = new QLabel(centralwidget);
@@ -87,6 +90,8 @@ public:
         menuFile->addAction(actionReset_Stats);
         menuFile->addSeparator();
         menuFile->addAction(actionQuit);
+        menuFile->addSeparator();
+        menuFile->addAction(actionMain_Menu);
 
         retranslateUi(MainWindow);
 
@@ -100,6 +105,7 @@ public:
         actionLoad->setText(QCoreApplication::translate("MainWindow", "Load", nullptr));
         actionQuit->setText(QCoreApplication::translate("MainWindow", "Quit", nullptr));
         actionReset_Stats->setText(QCoreApplication::translate("MainWindow", "Reset Stats", nullptr));
+        actionMain_Menu->setText(QCoreApplication::translate("MainWindow", "Main Menu", nullptr));
         points->setText(QCoreApplication::translate("MainWindow", "Points: 0", nullptr));
         plus_pts->setText(QCoreApplication::translate("MainWindow", "+Points", nullptr));
         plus_pps1->setText(QCoreApplication::translate("MainWindow", "Buy 1 PPS for 50 Pts", nullptr));
