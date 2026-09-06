@@ -24,6 +24,8 @@ private slots:
 
     void on_plus_pps1_clicked();
 
+    void on_actionQuit_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

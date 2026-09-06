@@ -79,3 +79,10 @@ void MainWindow::on_plus_pps1_clicked()
     }
 }
 
+
+
+void MainWindow::on_actionQuit_triggered()
+{
+    QApplication::quit();
+}
+

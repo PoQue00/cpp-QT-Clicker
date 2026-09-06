@@ -10,9 +10,12 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
+#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
 
@@ -21,6 +24,10 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *actionSave;
+    QAction *actionLoad;
+    QAction *actionQuit;
+    QAction *actionReset_Stats;
     QWidget *centralwidget;
     QLabel *points;
     QPushButton *plus_pts;
@@ -28,12 +35,22 @@ public:
     QPushButton *plus_ppc1;
     QLabel *ppc;
     QLabel *pps;
+    QMenuBar *menuBar;
+    QMenu *menuFile;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(243, 88);
+        MainWindow->resize(583, 398);
+        actionSave = new QAction(MainWindow);
+        actionSave->setObjectName("actionSave");
+        actionLoad = new QAction(MainWindow);
+        actionLoad->setObjectName("actionLoad");
+        actionQuit = new QAction(MainWindow);
+        actionQuit->setObjectName("actionQuit");
+        actionReset_Stats = new QAction(MainWindow);
+        actionReset_Stats->setObjectName("actionReset_Stats");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         points = new QLabel(centralwidget);
@@ -44,10 +61,10 @@ public:
         plus_pts->setGeometry(QRect(0, 60, 51, 24));
         plus_pps1 = new QPushButton(centralwidget);
         plus_pps1->setObjectName("plus_pps1");
-        plus_pps1->setGeometry(QRect(70, 0, 161, 24));
+        plus_pps1->setGeometry(QRect(160, 100, 161, 24));
         plus_ppc1 = new QPushButton(centralwidget);
         plus_ppc1->setObjectName("plus_ppc1");
-        plus_ppc1->setGeometry(QRect(70, 20, 171, 24));
+        plus_ppc1->setGeometry(QRect(160, 130, 171, 24));
         ppc = new QLabel(centralwidget);
         ppc->setObjectName("ppc");
         ppc->setGeometry(QRect(0, 20, 61, 16));
@@ -55,6 +72,21 @@ public:
         pps->setObjectName("pps");
         pps->setGeometry(QRect(0, 40, 71, 16));
         MainWindow->setCentralWidget(centralwidget);
+        menuBar = new QMenuBar(MainWindow);
+        menuBar->setObjectName("menuBar");
+        menuBar->setGeometry(QRect(0, 0, 583, 21));
+        menuFile = new QMenu(menuBar);
+        menuFile->setObjectName("menuFile");
+        MainWindow->setMenuBar(menuBar);
+
+        menuBar->addAction(menuFile->menuAction());
+        menuFile->addAction(actionSave);
+        menuFile->addSeparator();
+        menuFile->addAction(actionLoad);
+        menuFile->addSeparator();
+        menuFile->addAction(actionReset_Stats);
+        menuFile->addSeparator();
+        menuFile->addAction(actionQuit);
 
         retranslateUi(MainWindow);
 
@@ -64,12 +96,17 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        actionSave->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
+        actionLoad->setText(QCoreApplication::translate("MainWindow", "Load", nullptr));
+        actionQuit->setText(QCoreApplication::translate("MainWindow", "Quit", nullptr));
+        actionReset_Stats->setText(QCoreApplication::translate("MainWindow", "Reset Stats", nullptr));
         points->setText(QCoreApplication::translate("MainWindow", "Points: 0", nullptr));
         plus_pts->setText(QCoreApplication::translate("MainWindow", "+Points", nullptr));
         plus_pps1->setText(QCoreApplication::translate("MainWindow", "Buy 1 PPS for 50 Pts", nullptr));
         plus_ppc1->setText(QCoreApplication::translate("MainWindow", "Buy 1 PPC for 30 Pts", nullptr));
         ppc->setText(QCoreApplication::translate("MainWindow", "PPC: ", nullptr));
         pps->setText(QCoreApplication::translate("MainWindow", "PPS:", nullptr));
+        menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
     } // retranslateUi
 
 };
