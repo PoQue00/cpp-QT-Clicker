@@ -164,7 +164,6 @@ This project is a compact demo rather than a polished commercial game. Some aspe
 
 - static UI layout rather than responsive design
 - no advanced balancing or progression systems
-- no explicit license file
 - simplistic save file handling tied to the app working directory
 
 ## Future Ideas
@@ -176,7 +175,3 @@ Possible improvements include:
 - sound effects and improved UI styling
 - more game systems such as achievements or unlockables
 - stronger architecture separation between logic and UI
-
-## License
-
-This project does not currently include a license file, so it should be treated as unlicensed unless otherwise specified by the project owner.
