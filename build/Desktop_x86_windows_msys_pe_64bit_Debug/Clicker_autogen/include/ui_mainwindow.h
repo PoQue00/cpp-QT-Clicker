@@ -90,10 +90,10 @@ public:
         dockWidgetContents->setObjectName("dockWidgetContents");
         plus_pps1 = new QPushButton(dockWidgetContents);
         plus_pps1->setObjectName("plus_pps1");
-        plus_pps1->setGeometry(QRect(20, 0, 111, 24));
+        plus_pps1->setGeometry(QRect(0, 0, 111, 24));
         plus_ppc1 = new QPushButton(dockWidgetContents);
         plus_ppc1->setObjectName("plus_ppc1");
-        plus_ppc1->setGeometry(QRect(10, 30, 121, 24));
+        plus_ppc1->setGeometry(QRect(0, 20, 121, 24));
         dockWidget->setWidget(dockWidgetContents);
         MainWindow->addDockWidget(Qt::DockWidgetArea::LeftDockWidgetArea, dockWidget);
 

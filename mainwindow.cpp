@@ -166,6 +166,11 @@ void MainWindow::on_actionMain_Menu_triggered()
 
 void MainWindow::on_Shop_clicked()
 {
-    ui->dockWidget->show();
+    if(ui->dockWidget->isVisible()){
+        ui->dockWidget->hide();
+    }
+    else if(!ui->dockWidget->isVisible()){
+        ui->dockWidget->show();
+    }
 }
 
