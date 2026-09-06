@@ -89,9 +89,9 @@ public:
         menuFile->addSeparator();
         menuFile->addAction(actionReset_Stats);
         menuFile->addSeparator();
-        menuFile->addAction(actionQuit);
-        menuFile->addSeparator();
         menuFile->addAction(actionMain_Menu);
+        menuFile->addSeparator();
+        menuFile->addAction(actionQuit);
 
         retranslateUi(MainWindow);
 

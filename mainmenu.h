@@ -20,6 +20,8 @@ private slots:
 
     void on_Quit_clicked();
 
+    void on_Load_Game_clicked();
+
 private:
     Ui::MainMenu *ui;    
 };

@@ -7,6 +7,7 @@
 #include <QJsonDocument>
 #include <QFile>
 
+void load_game();
 
 MainMenu::MainMenu(QWidget *parent)
     : QMainWindow(parent)
@@ -31,3 +32,12 @@ void MainMenu::on_New_Game_clicked()
     gameWindow->show();
     this->hide();
 }
+
+void MainMenu::on_Load_Game_clicked()
+{
+    load_game();
+    MainWindow *gameWindow = new MainWindow();
+    gameWindow->show();
+    this->hide();
+}
+

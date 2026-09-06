@@ -112,9 +112,9 @@
     <addaction name="separator"/>
     <addaction name="actionReset_Stats"/>
     <addaction name="separator"/>
-    <addaction name="actionQuit"/>
-    <addaction name="separator"/>
     <addaction name="actionMain_Menu"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuit"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>

@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "mainmenu.h"
 
 #include <QTimer>
 
@@ -122,7 +123,8 @@ void MainWindow::on_actionLoad_triggered()
     ui->pps->setText("PPS: " + QString::number(pps));
 }
 
-void save_game(){
+void save_game()
+{
     QJsonObject saveData;
 
     saveData["pts"] = pts;
@@ -131,37 +133,33 @@ void save_game(){
 
     QJsonDocument document(saveData);
 
-    QByteArray jsonData = document.toJson();
-
     QFile file("save.json");
-
-    if (!file.open(QIODevice::WriteOnly))
-    {
+    if(!file.open(QIODevice::WriteOnly))
         return;
-    }
-
-    file.write(jsonData);
-
+    file.write(document.toJson());
     file.close();
 }
 
-void load_game(){
+void load_game()
+{
     QFile file("save.json");
 
     if (!file.open(QIODevice::ReadOnly))
-    {
         return;
-    }
 
     QByteArray jsonData = file.readAll();
-
     file.close();
 
     QJsonDocument document = QJsonDocument::fromJson(jsonData);
-
     QJsonObject saveData = document.object();
 
     pts = saveData["pts"].toInt();
     ppc = saveData["ppc"].toInt();
     pps = saveData["pps"].toInt();
+}
+void MainWindow::on_actionMain_Menu_triggered()
+{
+    MainMenu *mainMenu = new MainMenu();
+    mainMenu->show();
+    this->hide();
 }
